@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Travel_Map_Book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kTj-aK-NDJ">
+                                <rect key="frame" x="0.0" y="134" width="320" height="346"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-yB-3xJ">
+                                <rect key="frame" x="16" y="20" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SubTitle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNR-2g-XOW">
+                                <rect key="frame" x="16" y="58" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzB-J2-jQX">
+                                <rect key="frame" x="143" y="96" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LSJ-fk-zSu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tzB-J2-jQX" firstAttribute="centerX" secondItem="kTj-aK-NDJ" secondAttribute="centerX" id="23B-le-Bp2"/>
+                            <constraint firstItem="kTj-aK-NDJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W5I-eS-we3"/>
+                            <constraint firstItem="Tve-yB-3xJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bXt-sv-zxt"/>
+                            <constraint firstItem="iNR-2g-XOW" firstAttribute="top" secondItem="Tve-yB-3xJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fZn-mn-xMk"/>
+                            <constraint firstItem="iNR-2g-XOW" firstAttribute="centerX" secondItem="tzB-J2-jQX" secondAttribute="centerX" id="hgt-5y-8qY"/>
+                            <constraint firstItem="Tve-yB-3xJ" firstAttribute="leading" secondItem="iNR-2g-XOW" secondAttribute="leading" id="ijK-8R-85b"/>
+                            <constraint firstItem="Tve-yB-3xJ" firstAttribute="trailing" secondItem="iNR-2g-XOW" secondAttribute="trailing" id="j6U-z5-qXW"/>
+                            <constraint firstAttribute="trailing" secondItem="kTj-aK-NDJ" secondAttribute="trailing" id="jXu-tv-uF1"/>
+                            <constraint firstItem="tzB-J2-jQX" firstAttribute="top" secondItem="iNR-2g-XOW" secondAttribute="bottom" constant="8" symbolic="YES" id="ly6-Aw-LE2"/>
+                            <constraint firstItem="Tve-yB-3xJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qtM-tp-rzh"/>
+                            <constraint firstItem="kTj-aK-NDJ" firstAttribute="top" secondItem="tzB-J2-jQX" secondAttribute="bottom" constant="8" symbolic="YES" id="sPu-QJ-MGV"/>
+                            <constraint firstItem="kTj-aK-NDJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sTm-b9-moY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="kTj-aK-NDJ" id="X8E-XZ-gej"/>
+                        <outlet property="textSubTitle" destination="iNR-2g-XOW" id="g6g-qk-VAb"/>
+                        <outlet property="textTitle" destination="Tve-yB-3xJ" id="Azc-3a-Zh0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.125" y="106.25"/>
+        </scene>
+    </scenes>
+</document>
