@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Inteligatent_Image" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gpU-Jz-88v">
+                                <rect key="frame" x="16" y="20" width="343" height="541"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="541" id="1B4-ge-FUz"/>
+                                    <constraint firstAttribute="width" constant="343" id="2fy-dW-7nL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCH-wl-XAp">
+                                <rect key="frame" x="16" y="569" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="izO-Hf-M4d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLb-GA-a9I">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.1043915102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Change Picture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnChangePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0T-L0-rlN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CLb-GA-a9I" firstAttribute="top" secondItem="LCH-wl-XAp" secondAttribute="bottom" constant="8" symbolic="YES" id="7Aq-PZ-BIK"/>
+                            <constraint firstItem="gpU-Jz-88v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AWm-3y-Cmz"/>
+                            <constraint firstItem="gpU-Jz-88v" firstAttribute="leading" secondItem="LCH-wl-XAp" secondAttribute="leading" id="Gb6-Kw-uXa"/>
+                            <constraint firstItem="LCH-wl-XAp" firstAttribute="leading" secondItem="CLb-GA-a9I" secondAttribute="leading" id="J75-u7-oUS"/>
+                            <constraint firstItem="gpU-Jz-88v" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WbZ-Pk-1AX"/>
+                            <constraint firstItem="gpU-Jz-88v" firstAttribute="trailing" secondItem="LCH-wl-XAp" secondAttribute="trailing" id="dcL-JC-dY3"/>
+                            <constraint firstAttribute="bottom" secondItem="CLb-GA-a9I" secondAttribute="bottom" constant="20" symbolic="YES" id="gX1-u8-b2x"/>
+                            <constraint firstItem="gpU-Jz-88v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hMB-KF-j4c"/>
+                            <constraint firstItem="LCH-wl-XAp" firstAttribute="trailing" secondItem="CLb-GA-a9I" secondAttribute="trailing" id="hau-6K-a4H"/>
+                            <constraint firstItem="LCH-wl-XAp" firstAttribute="top" secondItem="gpU-Jz-88v" secondAttribute="bottom" constant="8" symbolic="YES" id="td5-sZ-ruN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgPicture" destination="gpU-Jz-88v" id="Nq9-hT-49J"/>
+                        <outlet property="lblResult" destination="LCH-wl-XAp" id="Jt7-9a-Foj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
